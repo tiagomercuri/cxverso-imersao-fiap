@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Doceria Gourmet</title>
+  </head>
+  <body>
+
+    <section class="container">
+        <header>
+            <h1>🍰 Doceria Gourmet</h1>
+            <p>Sabores artesanais feitos com amor</p>
+        </header>
+        
+        <div class="produtos">
+            <div class="card">
+                <div class="img-placeholder">🍫</div>
+                <h3>Brigadeiro Belga</h3>
+                <span class="preco">R$ 8,00</span>
+                <button class="btn-comprar" data-id="1" data-nome="Brigadeiro Belga" data-preco="8">Comprar</button>
+            </div>
+
+            <div class="card">
+                <div class="img-placeholder">🧁</div>
+                <h3>Red Velvet</h3>
+                <span class="preco">R$ 15,00</span>
+                <button class="btn-comprar" data-id="2" data-nome="Red Velvet" data-preco="15">Comprar</button>
+            </div>
+
+            <div class="card">
+                <div class="img-placeholder">🍩</div>
+                <h3>Donut Premium</h3>
+                <span class="preco">R$ 12,50</span>
+                <button class="btn-comprar" data-id="3" data-nome="Donut Premium" data-preco="12.50">Comprar</button>
+            </div>
+        </div>
+
+        <div id="carrinho" class="carrinho-container">
+            <h3>Carrinho Vazio</h3>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

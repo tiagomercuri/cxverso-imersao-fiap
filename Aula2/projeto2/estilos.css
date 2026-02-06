@@ -1,0 +1,166 @@
+:root {
+    /* Cores do Site */
+    --bg-body: #111111;      /* Fundo quase preto */
+    --text-body: #ffffff;    /* Texto do corpo (branco para ler no fundo preto) */
+    
+    /* Cores dos Cards */
+    --card-bg: #ffffff;      /* Fundo do card */
+    --card-border: #f8bbd0;  /* Borda rosa claro */
+    --card-shadow: #d81b60;  /* Sombra rosa escuro */
+    
+    /* Cores de Destaque */
+    --primary-color: #d81b60; /* Rosa Pink Principal */
+    --primary-hover: #ad1457; /* Rosa mais escuro para hover */
+    --text-card: #2c3e50;     /* Texto escuro para ler DENTRO do card branco */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- GRID DE PRODUTOS --- */
+.produtos {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 15px;
+    padding: 25px;
+    width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.15); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.3);
+    border-color: var(--primary-color);
+}
+
+.img-placeholder {
+    font-size: 60px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.preco {
+    color: var(--text-card);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.btn-comprar {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 100%; 
+}
+
+.btn-comprar:hover {
+    background-color: var(--primary-hover);
+}
+
+/* --- CARRINHO --- */
+.carrinho-container {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.15);
+    color: var(--text-card); 
+}
+
+.carrinho-container h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--card-border);
+    padding-bottom: 10px;
+}
+
+.carrinho-container ul {
+    list-style: none;
+}
+
+.carrinho-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 1.1rem;
+}
+
+.btn-remover {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: background 0.2s;
+}
+
+.btn-remover:hover {
+    background-color: #d32f2f;
+}
+
+.total-pedido {
+    text-align: right;
+    font-size: 1.3rem;
+    color: var(--text-card);
+    margin-top: 20px;
+}

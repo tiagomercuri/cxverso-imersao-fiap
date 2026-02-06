@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(135deg, #e0f2ff 0%, #b3d9ff 100%); */
+    background: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1a5276;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.produtos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+    border: 2px solid #85c1e9;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.card h3 {
+    color: #2980b9;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #1a5276;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-comprar:hover {
+    background: #2980b9;
+}
+
+.carrinho-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+    border: 2px solid #85c1e9;
+}
+
+.carrinho-container h3 {
+    color: #2980b9;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.carrinho-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrinho-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #d4e6f1;
+    color: #1a5276;
+}
+
+.btn-remover {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-remover:hover {
+    background: #c0392b;
+}
+
+.carrinho-container hr {
+    border: none;
+    border-top: 2px solid #85c1e9;
+    margin: 15px 0;
+}
+
+.carrinho-container p {
+    text-align: right;
+    color: #1a5276;
+    font-size: 1.2rem;
+}
