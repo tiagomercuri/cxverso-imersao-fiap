@@ -1,7 +1,5 @@
-Para SEGUNDA FEIRA
+# Tarefa para segunda
 
-
-/*
 
 Explorador de Destinos
 
@@ -20,8 +18,4 @@ LocalStorage: Criar um botão "Salvar Favorito" que armazena o título da postag
 
 Ao recarregar a página, esse favorito deve aparecer em uma lista.
 
-
 Geolocation: Mostrar a latitude e longitude do usuário como seu "Ponto de Partida".
-
-
-*/
