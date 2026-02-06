@@ -10,8 +10,8 @@
     "module": "ES6",
     "target": "esnext",
     "lib": ["DOM", "ES6", "esnext"],
-    // "moduleResolution": "bundler",
     "types": [],
+    // "moduleResolution": "bundler",
     // For nodejs:
     // and npm install -D @types/node
 
