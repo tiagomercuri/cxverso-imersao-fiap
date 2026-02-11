@@ -1,0 +1,11 @@
+{
+
+  "compilerOptions": {
+    "target": "ES6", // gera o JS Moderno
+    "module": "esnext", // Permite o uso de import/export
+    "outDir": "src/js", // local onde será compilado o JS
+    "strict": true, // garante a tipagem forte
+    "lib": ["DOM","ES6","esnext"], // Permite o uso do DOM no TypeScript
+    "esModuleInterop": true, // Melhora a compatibilidade dos módulos
+  }
+}

@@ -1,0 +1,97 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+:root {
+    --bg: #f5f5f5;
+    --bg-footer: #eeeeee;
+    --color1: #1a237e;
+    --color2: #ffd600;
+    --color3: white;
+    --color-erro: #d32f2f;
+    --color-sucess: #388e3c;
+    --text-color: #333;
+    --text-footer: #666;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* altura mínima do site deve ser 100% da altura da janela*/
+}
+header {
+    background: var(--color1);
+    text-align: center;
+    color: var(--color3);
+    padding: 2rem 0;
+    width: 100%;
+}
+main {
+    flex: 1; /* ocupa todo o espaço vazio entre o header e o footer */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* começa no topo na verical, não no meio */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.card-feedback {
+    background: var(--color3);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+.tlt-destaque {
+    color: var(--color1);
+    margin-bottom: 20px;
+    display: inline-block; /* faz o h2 se comportar como bloco inline */
+    border-bottom: 4px solid var(--color2);
+    padding-bottom: 5px; /* espaço entre o texto e a borda bottom */
+}
+.campo {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* focus é acionado quando o cursor está no input ou textarea */
+input:focus, textarea:focus {
+    border-color: var(--color1);
+    outline: none; /* remove a borda focus padrão do navegador */
+}
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: var(--color1);
+    color: var(--color3);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-enviar:hover {
+    opacity: 0.9; /* 0.9 = 90% de visibilidade e 10% de transparência */
+}
+footer {
+    background: var(--bg-footer);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: var(--text-footer);
+}

@@ -1,0 +1,62 @@
+/* reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variaveis globais */
+:root {
+    --primaria: #e63946; /* tom vermelho */
+    --escura: #1d3557; /* tom marinho */
+    --clara: #f1faee; /* tom branco/verde */
+    --bgCard: white; 
+    --hoverBtn: #990f1b; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--clara);
+    color: var(--escura);
+}
+header {
+    background: var(--escura);
+    padding: 1rem;
+    text-align: center;
+}
+header h1 {
+    color: var(--clara);
+}
+main {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: var(--bgCard);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+    background: gray;
+    color: var(--bgCard);
+}
+.btn-comprar {
+    background: var(--primaria);
+    color: var(--bgCard);
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-comprar:hover {
+    background: var(--hoverBtn);
+}
+footer {
+    display: flex;
+    justify-content: center;
+}
