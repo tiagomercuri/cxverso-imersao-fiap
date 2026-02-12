@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "sass": "^1.97.3"
+  },
+  "name": "exemplo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "detect-libc": "^2.1.2",
+    "immutable": "^5.1.4",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^4.0.3",
+    "readdirp": "^4.1.2",
+    "source-map-js": "^1.2.1"
+  },
+  "scripts": {
+    "sass": "sass --watch main.scss css/estilo.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
