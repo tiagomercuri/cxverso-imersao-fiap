@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-class ConsorcioEngine {
+class Consorcio {
     constructor() {
         this.allPlans = []; // Cache local de todos os planos
         // Tenta localizar no HTML o elemento onde os cards serão exibidos (o grid)
@@ -23,7 +23,7 @@ class ConsorcioEngine {
             this.init();
         }
     }
-    // promessa
+    // Promessa
     init() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -134,5 +134,5 @@ class MenuNavigation {
 // Inicialização segura
 window.addEventListener('DOMContentLoaded', () => {
     new MenuNavigation(); // Instancia o menu
-    new ConsorcioEngine(); // Instancia o buscador de planos
+    new Consorcio(); // Instancia o buscador de planos
 });

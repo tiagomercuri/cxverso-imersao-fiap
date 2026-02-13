@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --color1: #00f2ff;
+    --color2: #f8fafc;
+    --bg-color: #0f172a;
+    --bg-color2: #1e293b;
+
+    /* RESPONSIVIDADE AVANÇADA: Espaçamentos fluídos */
+    --padding-container: clamp(1rem, 5vw, 3rem); /* padding mínimo (cel), ideal(5% da largura da tela) e máximo (desktop) */
+    --font-step-1: clamp(1.2rem, 2vw + 1rem, 1.8rem);
+}
+body {
+    background: var(--bg-color);
+    color: var(--color2);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: var(--padding-container);
+}

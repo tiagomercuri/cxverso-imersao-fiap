@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <title>Dev Academy</title>
+</head>
+<body>
+    <header class="main-nav">
+        <div class="nav-content">
+            <h1 class="logo">DevAcademy</h1>
+
+            <button class="mn-hamburguer" id="btnMenu" aria-expanded="false" aria-label="Abrir Menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+
+            <nav class="nav-links" id="menuLinks">
+                <ul>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Mentoria</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="header-filter">
+            <h2>Títiulo 2</h2>
+            <div class="filter-group">
+                <input type="text" id="filterInput" placeholder="Buscar Tecnologia (Ex: TypeScript)..." aria-label="Filtrar Planos">
+            </div>
+        </section>
+
+        <div id="cursosGrid" class="cursos-grid">
+            <p class="voltar"></p>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="footer-brand">
+            <h3 class="footer-logo"><span>Dev</span>Academy</h3>
+            <p>Acelerando Carreiras com foco no que o mercado realmente pede.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Explorar Cursos">
+            <h3>EXPLORAR</h3>
+            <ul>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Mentoria</a></li>
+                <li><a href="#">Comunidade</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-news">
+            <h3>NEWSLETTER</h3>
+            <form class="form-news">
+                <input type="email" placeholder="E-mail" aria-label="Seu e-mail para newsletter">
+                <button type="submit">OK</button>
+            </form>
+        </div>
+        
+    </footer>
+
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>
