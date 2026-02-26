@@ -1,0 +1,5 @@
+[
+    {"id":1,"modelo":"Moto1","autonomia":80,"preco":12000, "imagem":"imagem.jpg"},
+    {"id":2,"modelo":"Moto2","autonomia":150,"preco":17000, "imagem":"imagem.jpg"},
+    {"id":3,"modelo":"Moto3","autonomia":200,"preco":20000, "imagem":"imagem.jpg"}
+]

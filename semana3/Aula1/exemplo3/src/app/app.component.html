@@ -1,0 +1,54 @@
+<div class="blog-container">
+  <header>
+      <h1>Painel do Cliente</h1>
+  </header>
+
+  <section class="formulario">
+      <h3>{{postEditado() ? 'Editando Post' : 'Novo Post'}}</h3>
+      <input [(ngModel)]="novoTitulo" placeholder="Titulo">
+      <textarea [(ngModel)]="novoConteudo" placeholder="Digite o Conteúdo"></textarea>
+
+      @if (postEditado()){
+          <button (click)="salvarEditar()">Salvar Alterações</button>
+          <button (click)="cancelarEdicao()">Cancelar</button>
+      }
+      @else{
+          <button (click)="adicionarPost()">Publicar</button>
+      }
+
+  </section>
+  <section class="feed">
+      <!-- track fazer o rastreio para identicar o objeto -->
+      @for (post of posts(); track post.titulo){
+          <article class="post-card">
+              <div class="post-header">
+                  <h3>{{post.titulo}}</h3>
+                  <div class="acoes">
+                      <button (click)="editarPost(post)">Editar</button>
+                      <button (click)="excluirPost(post)">X</button>
+                  </div>
+              </div>
+              <p>{{ post.conteudo}}</p>
+
+          </article>
+      }
+  </section>
+  <hr>
+  <section class="feed">
+      <h2>Ùltimas postagens</h2>
+      @for (post of posts(); track post.titulo){
+           <article class="post-card">
+              <div class="post-header">
+                  <h3>{{post.titulo}}</h3>
+                  <div class="acoes">
+                      <button (click)="excluirPost(post)">X</button>
+                  </div>
+              </div>
+              <p>{{ post.conteudo}}</p>
+          </article>
+      } @empty {
+          <p>Nenhum post publicado</p>
+      }
+
+  </section>
+</div>

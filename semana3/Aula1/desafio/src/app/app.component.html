@@ -1,0 +1,63 @@
+<div class="container">
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Sistema de Suporte ao Cliente</h1>
+    <p>Gerencie os atendimentos pendentes</p>
+  </header>
+
+  <!-- Formulário para cadastrar ou editar um ticket -->
+  <div class="formulario">
+    <!-- O título do formulário muda dependendo do modo -->
+    @if (ticketEditado) {
+      <h2>Editar Ticket</h2>
+    } @else {
+      <h2>Novo Ticket</h2>
+    }
+
+    <!-- Campo: nome do cliente -->
+    <input
+      type="text"
+      placeholder="Nome do cliente"
+      [(ngModel)]="novoNome"
+    />
+
+    <!-- Campo: descrição do problema -->
+    <textarea
+      placeholder="Descreva o problema ou dúvida do cliente..."
+      [(ngModel)]="novoProblema"
+      rows="3"
+    ></textarea>
+
+    <!-- Botões mudam conforme o modo: cadastro ou edição -->
+    @if (ticketEditado) {
+      <button (click)="salvarEdicao()">Salvar Alterações</button>
+      <button class="btn-cancelar" (click)="cancelarEdicao()">Cancelar</button>
+    } @else {
+      <button (click)="adicionarTicket()">Cadastrar Ticket</button>
+    }
+  </div>
+
+  <!-- Lista de tickets pendentes -->
+  <div class="feed">
+    <h2>Atendimentos Pendentes</h2>
+
+    <!-- @for percorre a lista de tickets e renderiza um card para cada um -->
+    @for (ticket of tickets(); track $index) {
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <h3>{{ ticket.nome }}</h3>
+          <div class="acoes">
+            <button (click)="editarTicket(ticket, $index)">Editar</button>
+            <button class="btn-resolver" (click)="resolverTicket($index)">Resolvido ✓</button>
+          </div>
+        </div>
+        <p>{{ ticket.problema }}</p>
+      </div>
+    } @empty {
+      <!-- Mensagem exibida quando não há tickets na lista -->
+      <p class="vazio">Nenhum atendimento pendente no momento.</p>
+    }
+  </div>
+
+</div>

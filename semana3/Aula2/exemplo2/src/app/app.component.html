@@ -1,0 +1,30 @@
+<div>
+    <header>
+        <h1>E-Moto Elétric</h1>
+        <p>O Futuro da mobilidade é elétrico</p>
+    </header>
+
+    <section>
+        <!--{{}} interpolação filtroAutonomia() signals -->
+        <label>Autonomia Mínima:<strong>{{ filtroAutonomia() }}</strong></label>
+        <input type="range" min="0" max="200" [(ngModel)]="filtroAutonomia" (input)="filtrar()"/>
+    </section>
+
+    <!-- control flow -->
+    @if(carregando()){
+        <div>Conectando ao estoque...</div>
+    }@else{
+        <div>
+            <!-- $event é uma variavel especial do angular que carrega os dados do evento -->
+             <!-- track -imagina que você vai trocar a moto de lugar vitrine, economiza energia  -->
+            @for (m of motosFiltradas(); track m.id){
+                <moto-card
+                [moto]="m"
+                (comprar)="comprar($event)">
+                </moto-card>
+            }@empty{
+                <p>Nenhuma moto encontrada</p>
+            }
+        </div>
+    }
+</div>

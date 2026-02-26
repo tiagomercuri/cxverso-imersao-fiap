@@ -1,0 +1,22 @@
+<div>
+    <h2>Perfil de Investidor</h2>
+    <form [formGroup]="investForm">
+        <h3>Quais tipos de ativos possui?</h3>
+        <!-- formArrayName como uma lista de contatos, você pode ter um, ou  muitos ,
+         o form se adapta na quantidade de dados -->
+        <div formArrayName="ativos">
+            <!-- @for olha para a lista e assina(carimba) um novo item(campo) -->
+            @for(ativo of ativos.controls;track $index){
+                <div>
+                    <!-- $index é um numero da chamada primeiro campo é o 0 ,assim por diante
+                     é usado para esse numero saber qual campo o usuario deseja apagar-->
+                    <input [formControlName]="$index" placeholder="Ex: Ações,Tesouro">
+                    <button (click)="removerAtivo($index)">X</button>
+                </div>
+            }
+     
+            <button (click)="adicionarAtivo()">Adicionar Ativo</button>
+            <button (click)="salvar()" [disabled]="investForm.invalid">Salvar Perfil</button>
+        </div>
+    </form>
+    </div>

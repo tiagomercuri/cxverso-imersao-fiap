@@ -1,0 +1,26 @@
+<div>
+    <h2>Cadastro de Cliente</h2>
+    <form [formGroup]="cadastroForm" (ngSubmit)="enviar()">
+        <div>
+            <label>Nome Completo</label>
+            <input formControlName="nome" placeholder="Digite seu nome"/>
+            <!-- Validator(invaldid) ele barra a entrada se a infomação não bater com o que foi digitado -->
+            @if (cadastroForm.get('nome')?.invalid && cadastroForm.get('nome')?.touched){
+                <small> Nome Obrigatório(mín. 3 letras)</small>
+            }
+        </div>
+       
+        <div>
+             <label>Email</label>
+             <input formControlName="email" type="email" placeholder="Digite seu email"/>
+             @if(cadastroForm.get('email')?.invalid && cadastroForm.get('email')?.touched){
+                <small>Digite um email válido</small>
+             }
+        </div>
+        <!-- [disable] trava de segurança impede que o usuario finalize a operação se faltar algum ou
+         campo obrigatório
+         -->
+        <button type="submit" [disabled]="cadastroForm.invalid">Cadastrar</button>
+ 
+    </form>
+</div>

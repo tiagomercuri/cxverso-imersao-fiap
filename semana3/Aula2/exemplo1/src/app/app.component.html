@@ -1,0 +1,11 @@
+<div class="container">
+ 
+    <h2>Status:{{mensagem()}}</h2>
+    <hr>
+   
+    <button (click)="carregar()">Verificar Mensagens</button>
+   
+    @if (mensagem() !== "Nenhum aviso" && mensagem() !== "Carregando..." ){
+      <p class="sucesso">O RxJS processou sua mensagem com sucesso</p>
+    }
+  </div>

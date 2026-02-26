@@ -1,0 +1,17 @@
+<article>
+    <div class="imagem">
+        <img [src]="moto().imagem" [alt]="moto().modelo">
+    </div>
+    <div>
+        <h3>{{ moto().modelo}}</h3>
+        <p>
+            <span>{{moto().autonomia }} km de autonomia</span>
+        </p>
+        <p>
+            {{moto().preco | currency:'BRL'}}
+        </p>
+    </div>
+    <button (click)="clickComprar()">
+        Comprar
+    </button>
+</article>

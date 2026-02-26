@@ -1,0 +1,86 @@
+/* Container */
+.blog-container {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background: #1976d2;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Formulário */
+  .formulario {
+    background: #e8f1ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .formulario input,
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bcd3f5;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .formulario button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .formulario button:first-of-type {
+    background: #1976d2;
+    color: white;
+  }
+  
+  .formulario button:last-of-type {
+    background: #bbd5ff;
+    color: #0d3f91;
+  }
+  
+  /* Feed */
+  .feed h2 {
+    color: #0d3f91;
+  }
+  
+  .post-card {
+    background: white;
+    border: 1px solid #d5e4ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .acoes button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .acoes button:first-of-type {
+    background: #e0ecff;
+    color: #0d3f91;
+  }
+  
+  .acoes button:last-of-type {
+    background: #ffe5e5;
+    color: #a30000;
+  }

@@ -1,0 +1,161 @@
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 15px;
+}
+
+/* Cabeçalho */
+header {
+  background: #1976d2;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 5px 0;
+  font-size: 1.6rem;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+/* Formulário */
+.formulario {
+  background: #e8f1ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 1px solid #bcd3f5;
+}
+
+.formulario h2 {
+  margin: 0 0 15px 0;
+  color: #0d3f91;
+  font-size: 1.1rem;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bcd3f5;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.formulario button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 0.95rem;
+  background: #1976d2;
+  color: white;
+}
+
+.formulario button:hover {
+  background: #1565c0;
+}
+
+.btn-cancelar {
+  background: #90a4c8 !important;
+  color: white !important;
+}
+
+.btn-cancelar:hover {
+  background: #7a90b5 !important;
+}
+
+/* Seção de atendimentos */
+.feed {
+  margin-top: 25px;
+}
+
+.feed h2 {
+  color: #0d3f91;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d5e4ff;
+  padding-bottom: 8px;
+}
+
+/* Card de cada ticket */
+.ticket-card {
+  background: white;
+  border: 1px solid #d5e4ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(25, 118, 210, 0.08);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ticket-header h3 {
+  margin: 0;
+  color: #0d3f91;
+  font-size: 1rem;
+}
+
+.ticket-card p {
+  margin: 0;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* Botões de ação do ticket */
+.acoes button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 6px;
+  background: #e0ecff;
+  color: #0d3f91;
+}
+
+.acoes button:hover {
+  background: #c7dcff;
+}
+
+.btn-resolver {
+  background: #e6f4ea !important;
+  color: #2e7d32 !important;
+}
+
+.btn-resolver:hover {
+  background: #c8e6c9 !important;
+}
+
+/* Mensagem de lista vazia */
+.vazio {
+  text-align: center;
+  color: #5b8dd9;
+  font-style: italic;
+  padding: 30px;
+  background: #f0f6ff;
+  border-radius: 8px;
+  border: 1px dashed #bcd3f5;
+}

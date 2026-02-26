@@ -1,0 +1,153 @@
+/* Layout Principal */
+.loja {
+    display: grid;
+    grid-template-columns: 1fr; /* antes: 350px 1fr */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    padding: 0 15px;
+  }
+  
+  
+  /* Responsividade simples */
+  @media (max-width: 768px) {
+    .loja {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Painel Lateral (Formulários) */
+  .painel-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Estilo geral dos Cards */
+  .card {
+    background: white;
+    border: 1px solid #d5e4ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(25, 118, 210, 0.08); /* Sombra azulada suave */
+  }
+  
+  /* Títulos dentro dos cards */
+  .card h3 {
+    margin: 0 0 15px 0;
+    color: #0d3f91; /* Azul escuro */
+    font-size: 1.1rem;
+    border-bottom: 2px solid #e8f1ff;
+    padding-bottom: 8px;
+  }
+  
+  /* Inputs gerais */
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bcd3f5;
+    background-color: #fcfdff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #1976d2;
+    background-color: white;
+  }
+  
+  /* Botões gerais */
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    background: #1976d2; /* Azul principal */
+    color: white;
+    transition: background 0.2s;
+    font-weight: bold;
+  }
+  
+  button:hover:not(:disabled) {
+    background: #1565c0;
+  }
+  
+  button:disabled {
+    background: #bcd3f5;
+    cursor: not-allowed;
+  }
+  
+  /* Status do cliente atendido */
+  .status {
+    margin-top: 15px;
+    padding: 10px;
+    background: #e3f2fd; /* Azul de alerta */
+    color: #0d47a1;
+    border-radius: 6px;
+    border-left: 4px solid #1976d2;
+    font-size: 0.9rem;
+  }
+  
+  /* Área da tabela */
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .badge {
+    background: #e8f1ff;
+    color: #1976d2;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  /* Tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    text-align: left;
+    padding: 12px;
+    color: #666;
+    font-size: 0.85rem;
+    border-bottom: 2px solid #e8f1ff;
+  }
+  
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+  }
+  
+  /* Botão de excluir específico */
+  .btn-del {
+    background: #d32f2f;
+    color: white;
+    width: auto;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .btn-del:hover {
+    background: #ffcdd2;
+  }
+  
+  /* Mensagem vazia */
+  .empty-msg {
+    text-align: center;
+    color: #90a4c8;
+    padding: 30px;
+    font-style: italic;
+  }

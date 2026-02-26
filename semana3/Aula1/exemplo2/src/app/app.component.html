@@ -1,0 +1,20 @@
+<div class="card">
+
+  <h1>Meu Contador</h1>
+
+  <p class="numero">Total de cliques:<strong>{{contador()}}</strong></p>
+
+  <button (click)="incrementar()"> Adicionar </button>
+  <button (click)="resetar()"class="btn-reset"> Zerar</button>
+
+  <hr>
+  <!-- Control Flow @if *ngIf -->
+   @if (contador()>= 10){
+    <p class="meta">Muito Bem você atingiu a meta</p>
+   } @else{
+    <!-- Interpolação dinâmica mostra como o trecho atualiza o texto automaticamente
+     a cada clique , sem precisar escrever a linha de codigo. -->
+    <p class="ajuda">Faltam {{ 10 - contador()}} cliques para a meta</p>
+   }
+
+</div>
