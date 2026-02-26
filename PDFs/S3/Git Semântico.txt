@@ -1,0 +1,6 @@
+Feat		Feature			Nova funcionalidade, botão, página ou endpoint.
+Fix		    Bug Fix			Correção de qualquer erro ou comportamento inesperado.
+Docs		Documentação		Alterações no README, JSDoc ou comentários.
+Style		Estilização/Lint	Ajustes de formatação (espaços, vírgulas) que não alteram a lógica.
+Refactor  	Refatoração		Melhoria no código existente sem alterar o que ele faz.
+Chore		Tarefa			Mudanças em build, dependências (package.json) ou config.
