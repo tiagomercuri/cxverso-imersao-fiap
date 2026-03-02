@@ -1,0 +1,52 @@
+<div class="bg-gray-50 py-10 min-h-screen">
+  <div class="container mx-auto px-4">
+    
+    <div class="mb-12 text-center">
+      <h2 class="text-4xl font-black text-gray-900 mb-2">Catálogo</h2>
+      <p class="text-gray-500 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      @for (item of (produtos$ | async); track item.id) {
+        <div class="group bg-white rounded-4xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col h-full">
+          
+          <div class="relative overflow-hidden aspect-square bg-gray-50">
+            <img 
+              [src]="item.imagem" 
+              [alt]="item.nome"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            >
+            <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            
+            <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded-2xl shadow-lg">
+              <span class="text-blue-600 font-black text-lg">
+                {{ item.preco | currency:'BRL' }}
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col grow">
+            <h3 class="text-xl font-bold text-gray-800 mb-2 line-clamp-1 group-hover:text-blue-600 transition-colors">
+              {{ item.nome }}
+            </h3>
+            
+            <p class="text-gray-500 text-sm line-clamp-2 mb-6 grow italic">
+              {{ item.descricao || 'Texto para descrição' }}
+            </p>
+
+            <a [routerLink]="['/produtos', item.id]" 
+               class="w-full bg-gray-900 text-white text-center py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all active:scale-95 flex items-center justify-center gap-2 group/btn">
+              <span>Lorem</span>
+            </a>
+          </div>
+        </div>
+      } @empty {
+        <div class="col-span-full py-20 text-center">
+          <h3 class="text-2xl font-bold text-gray-400">Nenhum produto encontrado</h3>
+          <p class="text-gray-500 mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

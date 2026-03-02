@@ -1,0 +1,79 @@
+<div class="flex items-center justify-center min-h-[80vh] px-4">
+  <div class="w-full max-w-2xl bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
+    
+    <div class="bg-linear-to-r from-blue-600 to-indigo-700 p-8">
+      <h2 class="text-3xl font-black text-white flex items-center gap-3">
+        <span>Cadastrar Novo Produto</span>
+      </h2>
+      <p class="text-blue-100 mt-2 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <form [formGroup]="formularioProduto" (ngSubmit)="salvar()" class="p-8 flex flex-col gap-6">
+      
+      <div class="flex flex-col gap-2 group">
+        <label class="font-bold text-gray-700 flex items-center gap-2 group-focus-within:text-blue-600 transition-colors">
+          <span class="text-lg"> Nome do Produto</span>
+        </label>
+        <input type="text" formControlName="nome" placeholder="Ex: Teclado Mecânico RGB"
+               class="p-4 border-2 border-gray-100 bg-gray-50 rounded-2xl focus:border-blue-500 focus:bg-white outline-none transition-all shadow-sm"
+               [class.border-red-400]="formularioProduto.get('nome')?.invalid && formularioProduto.get('nome')?.touched">
+        
+        @if (formularioProduto.get('nome')?.invalid && formularioProduto.get('nome')?.touched) {
+          <small class="text-red-500 font-bold flex items-center gap-1 ml-1 animate-pulse">
+             O nome deve ter pelo menos 5 caracteres.
+          </small>
+        }
+      </div>
+
+      <div class="flex flex-col gap-2 group">
+        <label class="font-bold text-gray-700 flex items-center gap-2 group-focus-within:text-blue-600 transition-colors">
+          <span class="text-lg">Preço de Venda</span> 
+        </label>
+        <div class="relative">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 font-black text-gray-400">R$</span>
+          <input type="number" formControlName="preco" placeholder="0.00"
+                 class="p-4 pl-12 w-full border-2 border-gray-100 bg-gray-50 rounded-2xl focus:border-blue-500 focus:bg-white outline-none transition-all shadow-sm"
+                 [class.border-red-400]="formularioProduto.get('preco')?.invalid && formularioProduto.get('preco')?.touched">
+        </div>
+        
+        @if (formularioProduto.get('preco')?.invalid && formularioProduto.get('preco')?.touched) {
+          <small class="text-red-500 font-bold flex items-center gap-1 ml-1 animate-pulse">
+             Insira um preço válido maior que zero.
+          </small>
+        }
+      </div>
+
+      <div class="flex flex-col gap-2 group">
+        <label class="font-bold text-gray-700 flex items-center gap-2 group-focus-within:text-blue-600 transition-colors">
+          <span class="text-lg">📝</span> Descrição Completa
+        </label>
+        <textarea formControlName="descricao" rows="4" placeholder="Descreva as especificações técnicas e diferenciais..."
+                  class="p-4 border-2 border-gray-100 bg-gray-50 rounded-2xl focus:border-blue-500 focus:bg-white outline-none transition-all shadow-sm resize-none"></textarea>
+      </div>
+
+      <div class="flex flex-col gap-2 group">
+        <label class="font-bold text-gray-700 flex items-center gap-2 group-focus-within:text-blue-600 transition-colors">
+          <span class="text-lg">Caminho da Imagem</span> 
+        </label>
+        <input type="text" formControlName="image" placeholder="Ex: /img/banco.jpg"
+              class="p-4 border-2 border-gray-100 bg-gray-50 rounded-2xl focus:border-blue-500 focus:bg-white outline-none transition-all shadow-sm">
+        <small class="text-gray-400 text-xs ml-1">
+          Dica: Use imagens salvas na pasta <b>public/img</b>.
+        </small>
+      </div>
+
+      <div class="pt-4 border-t border-gray-50 flex flex-col gap-3">
+        <button type="submit" 
+                [disabled]="formularioProduto.invalid" 
+                class="bg-blue-600 text-white py-4 rounded-2xl font-black text-xl hover:bg-blue-700 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed transition-all shadow-xl shadow-blue-200 active:scale-95 flex items-center justify-center gap-3">
+          <span>Finalizar Cadastro</span> 
+        </button>
+        
+        <button type="button" routerLink="/admin/dashboard" 
+                class="text-gray-400 font-bold hover:text-gray-600 transition-colors py-2">
+         Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

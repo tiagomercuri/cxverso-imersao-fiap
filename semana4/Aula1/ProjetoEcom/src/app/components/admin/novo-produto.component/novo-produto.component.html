@@ -1,0 +1,83 @@
+<div class="flex items-center justify-center py-10 px-4">
+  <div class="w-full max-w-xl bg-white rounded-3xl shadow-2xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
+    
+    <div class="bg-green-900 p-6">
+      <h2 class="text-2xl font-black text-white flex items-center gap-2">
+        <span>Cadastrar Novo Produto</span> 
+      </h2>
+    </div>
+
+    <form [formGroup]="formularioProduto" (ngSubmit)="Enviar()" class="p-8 space-y-6">
+      
+      <div class="space-y-1">
+        <label class="block text-sm font-bold text-gray-700 ml-1">Nome do Produto</label>
+        <input 
+          type="text" 
+          formControlName="nome" 
+          placeholder="Ex: Produto"
+          class="w-full p-3 bg-gray-50 border-2 border-gray-100 rounded-2xl outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm"
+          [class.border-red-200]="campoInvalido('nome')"
+        >
+        @if (campoInvalido('nome')) {
+          <p class="text-red-500 text-xs font-bold mt-1 ml-1 animate-pulse">Nome obrigatório (mín. 5 letras)</p>
+        }
+      </div>
+
+      <div class="space-y-1">
+        <label class="block text-sm font-bold text-gray-700 ml-1">Preço</label>
+        <div class="relative">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-bold">R$</span>
+          <input 
+            type="number" 
+            formControlName="preco" 
+            placeholder="0,00"
+            class="w-full p-3 pl-12 bg-gray-50 border-2 border-gray-100 rounded-2xl outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm"
+            [class.border-red-200]="campoInvalido('price')"
+          >
+        </div>
+        @if (campoInvalido('preco')) {
+          <p class="text-red-500 text-xs font-bold mt-1 ml-1 animate-pulse">O preço deve ser maior que zero</p>
+        }
+      </div>
+
+      <div class="space-y-1">
+        <label class="block text-sm font-bold text-gray-700 ml-1">Caminho da Imagem</label>
+        <input 
+          type="text" 
+          formControlName="imagem" 
+          placeholder="Ex: /img/imagem.jpg"
+          class="w-full p-3 bg-gray-50 border-2 border-gray-100 rounded-2xl outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm"
+        >
+        <p class="text-[10px] text-gray-400 mt-1 italic">Dica: A imagem deve estar na pasta <b>public/img</b>.</p>
+      </div>
+
+      <div class="space-y-1">
+        <label class="block text-sm font-bold text-gray-700 ml-1">Descrição Detalhada</label>
+        <textarea 
+          formControlName="descricao" 
+          rows="4"
+          placeholder="Descreva as principais características do item..."
+          class="w-full p-3 bg-gray-50 border-2 border-gray-100 rounded-2xl outline-none focus:border-green-500 focus:bg-white transition-all shadow-sm resize-none"
+        ></textarea>
+      </div>
+
+      <div class="pt-4">
+        <button 
+          type="submit" 
+          [disabled]="formularioProduto.invalid" 
+          class="w-full bg-green-600 text-white py-4 rounded-2xl font-black text-lg shadow-lg shadow-green-100 hover:bg-green-700 hover:shadow-green-200 active:scale-[0.98] transition-all disabled:bg-gray-200 disabled:shadow-none disabled:text-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        >
+          <span>Salvar</span> 
+        </button>
+        
+        <button 
+          type="button"
+          routerLink="/admin/dashboard"
+          class="w-full mt-3 text-gray-400 font-bold text-sm hover:text-gray-600 transition-colors"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

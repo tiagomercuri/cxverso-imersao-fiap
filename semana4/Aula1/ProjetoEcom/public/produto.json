@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Exemplo 1",
+    "preco": 849.90,
+    "descricao": "Lorem ipsum dolor sit amet.",
+    "imagem": "/img/banco.jpg",
+    "categoria": "premium"
+  },
+  {
+    "id": 2,
+    "nome": "Exemplo 2",
+    "preco": 489.90,
+    "descricao": "Lorem ipsum dolor sit amet.",
+    "imagem": "/img/banco.jpg",
+    "categoria": "standard"
+  },
+  {
+    "id": 3,
+    "nome": "Exemplo 3",
+    "preco": 299.00,
+    "descricao": "Lorem ipsum dolor sit amet.",
+     "imagem": "/img/banco.jpg",
+    "categoria": "classic"
+  }
+]
