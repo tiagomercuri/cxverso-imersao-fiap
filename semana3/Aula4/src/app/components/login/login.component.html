@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <h2>Banco Investimento</h2>
+    </div>
+
+    <form>
+        <div>
+            <label>Usuário</label>
+            <div>
+                <input type="text" [(ngModel)]="usuario" name="usuario" placeholder="Digite seu Usuário">
+            </div>
+        </div>
+
+          <div>
+            <label>Senha</label>
+            <div>
+                <input type="text" [(ngModel)]="senha" name="senha" placeholder="Digite sua senha">
+            </div>
+            <!-- type botton= evita que o form fique fazendo o recarregando da pagina -->
+            <button type="button" (click)="entrar()">Entrar</button>
+        </div>
+    </form>
+</div>

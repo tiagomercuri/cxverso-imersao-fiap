@@ -1,0 +1,15 @@
+<nav>
+    <div>Banco</div>
+
+    <div>
+        @if(role ==="admin"){
+            <a routerLink="dashboard/clientes" routerLinkActive="active">Clientes</a>
+        }
+         <a routerLink="dashboard/perfil" routerLinkActive="active">Perfil</a>
+         <button (click)="sair()">Sair</button>
+    </div>
+    
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,21 @@
+<h2>Lista de Clientes </h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Saldo</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+</table>
+<tbody>
+    @for (c of lista(); track c.id){
+        <tr>
+            <td>{{c.nome}}</td>
+            <td>{{c.saldo | currency:'BRL'}}</td>
+        </tr>
+        <span>
+            {{c.saldo > 10000 ? "VIP": "standard"}}
+        </span>
+    }
+</tbody>

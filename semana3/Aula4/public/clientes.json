@@ -1,0 +1,6 @@
+[
+    {"id":1,"nome":"José","saldo":1000, "nivel":"Standard"},
+    {"id":1,"nome":"Maria","saldo":150000, "nivel":"Premium"},
+    {"id":1,"nome":"Ronaldo","saldo":10000, "nivel":"Black"},
+    {"id":1,"nome":"Lourdes","saldo":5000, "nivel":"Gold"}
+]
